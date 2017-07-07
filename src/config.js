@@ -37,15 +37,15 @@ const config = {
   },
   test: {
     mongo: {
-      uri: 'mongodb://cosmosmy:us7dZc8jX9ZuPGGFh0e1WqYuFmPMm689RJp1Yb0Hvn6Qe4NzvqCGXIiFJsaf5yANLYAt5y1oBoqsjxtuZFoiug==@cosmosmy.documents.azure.com:10255/?ssl=true&replicaSet=globaldb',
+      uri: 'mongodb://localhost/aidatest',
       options: {
-        debug: false
+        debug: true
       }
     }
   },
   development: {
     mongo: {
-      uri: 'mongodb://cosmosmy:us7dZc8jX9ZuPGGFh0e1WqYuFmPMm689RJp1Yb0Hvn6Qe4NzvqCGXIiFJsaf5yANLYAt5y1oBoqsjxtuZFoiug==@cosmosmy.documents.azure.com:10255/?ssl=true&replicaSet=globaldb',
+      uri: 'mongodb://localhost/aidadev',
       options: {
         debug: true
       }
@@ -55,7 +55,8 @@ const config = {
     ip: process.env.IP || undefined,
     port: process.env.PORT || 8080,
     mongo: {
-      uri: process.env.MONGODB_URI || 'mongodb://cosmosmy:us7dZc8jX9ZuPGGFh0e1WqYuFmPMm689RJp1Yb0Hvn6Qe4NzvqCGXIiFJsaf5yANLYAt5y1oBoqsjxtuZFoiug==@cosmosmy.documents.azure.com:10255/?ssl=true&replicaSet=globaldb'
+      uri: process.env.MONGODB_URI || 'mongodb://cosmosmy:us7dZc8jX9ZuPGGFh0e1WqYuFmPMm689RJp1Yb0Hvn6Qe4NzvqCGXIiFJsaf5yANLYAt5y1oBoqsjxtuZFoiug==@cosmosmy.documents.azure.com:10255/aidadb?ssl=true'
+      //uri: process.env.MONGODB_URI || 'mongodb://localhost/aidadb'
     }
   }
 }
